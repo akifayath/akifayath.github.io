@@ -51,7 +51,10 @@ h3{font-size:1.2rem;margin-bottom:6px}
 .about p{max-width:66ch;margin:0 0 16px}
 .skills{display:flex;flex-wrap:wrap;gap:8px;margin:22px 0 0;padding:0;list-style:none}
 .skills li{background:var(--panel);padding:4px 12px;border-radius:99px;font-size:.92rem}
-.work{border-left:4px solid var(--water);padding:2px 0 2px 20px;margin:0 0 30px}
+.work{border-left:4px solid var(--water);padding:2px 0 2px 20px;margin:0 0 34px;display:grid;grid-template-columns:1fr 220px;gap:24px;align-items:start}
+.pic{position:relative;aspect-ratio:4/3;border-radius:8px;overflow:hidden;background:var(--panel);border:1.5px dashed var(--line)}
+.pic::before{content:"Add image";position:absolute;inset:0;display:grid;place-items:center;color:var(--mute);font-size:.9rem}
+.pic img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
 .work:nth-of-type(2){border-color:color-mix(in srgb,var(--water) 75%,var(--silt))}
 .work:nth-of-type(3){border-color:color-mix(in srgb,var(--water) 50%,var(--silt))}
 .work:nth-of-type(4){border-color:var(--silt)}
@@ -68,7 +71,7 @@ ul.plain{margin:0;padding-left:1.1em}
 ul.plain li{margin:0 0 8px}
 .contact a{font-weight:600}
 footer{padding:28px 0 40px;color:var(--mute);font-size:.9rem;border-top:1px solid var(--line)}
-@media (max-width:700px){.hero{padding-top:40px}.id{gap:16px}.portrait{width:84px;height:84px}.two{grid-template-columns:1fr}}
+@media (max-width:700px){.work{grid-template-columns:1fr}.pic{order:-1;aspect-ratio:16/9}.hero{padding-top:40px}.id{gap:16px}.portrait{width:84px;height:84px}.two{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -108,24 +111,36 @@ footer{padding:28px 0 40px;color:var(--mute);font-size:.9rem;border-top:1px soli
 <section id="research">
 <h2>Research</h2>
 <div class="work">
+<div class="txt">
 <h3>The Lower Rhine River under climate change</h3>
 <p>A schematized hydro-morphological model of the Lower Rhine River and its branches projects how climate-driven changes in the hydrograph and sea-level shift the way flow is distributed at its bifurcations- the Pannerdense Kop and IJsselkop.</p>
 <p class="src">Journal of Geophysical Research: Earth Surface, 2026</p>
 </div>
+<div class="pic"><img src="images/JGR 2026.jpg" alt="Figure from the Lower Rhine climate projections" width="440" height="330" loading="lazy" onerror="this.remove()"></div>
+</div>
 <div class="work">
+<div class="txt">
 <h3>Signs of tipping in a river system</h3>
 <p>With Astrid Blom and colleagues, I examined long records of a bifurcating river for signals that indicate if the system is approaching a tipping point induced by noise.</p>
 <p class="src">Geophysical Research Letters, 2024</p>
 </div>
+<div class="pic"><img src="images/GRL 2024.jpg" alt="Figure from the river tipping study" width="440" height="330" loading="lazy" onerror="this.remove()"></div>
+</div>
 <div class="work">
+<div class="txt">
 <h3>Bifurcations in an engineered river</h3>
 <p>The Pannerdense Kop and IJsselkop bifurcations split the Lower Rhine River's flow between the Waal and Pannerden Canal, Nederrijn and IJssel. Using 100 years of bed-level, bed surface grain-size, water level, and discharge data, I traced how peak flows and human interventions shaped the system's development over the last century.</p>
 <p class="src">Water Resources Research, 2023</p>
 </div>
+<div class="pic"><img src="images/WRR 2023.jpg" alt="Figure of the Rhine bifurcation region" width="440" height="330" loading="lazy" onerror="this.remove()"></div>
+</div>
 <div class="work">
+<div class="txt">
 <h3>Flow in river deltas</h3>
 <p>Field campaigns with an acoustic Doppler current profiler at Wax Lake Delta, USA, showed how lateral outflow from distributary channels influence three-dimensional flow structure at channel-island interfaces and sediment transport.</p>
 <p class="src">Water Resources Research, 2022</p>
+</div>
+<div class="pic"><img src="images/WRR 2022.jpg" alt="Photo or figure from the Wax Lake Delta field work" width="440" height="330" loading="lazy" onerror="this.remove()"></div>
 </div>
 </section>
 
