@@ -46,20 +46,30 @@ nav a:hover{color:var(--water)}
 .btn.fill{background:var(--water);color:var(--bg)}
 .btn:hover{background:var(--ink);border-color:var(--ink);color:var(--bg)}
 section{padding:52px 0;border-top:1px solid var(--line)}
+.lede{font-size:1.2rem;line-height:1.55;max-width:58ch;margin:0 0 26px}
+.chapter{display:grid;grid-template-columns:1fr 300px;gap:36px;align-items:center;margin:0 0 56px}
+.chapter:nth-of-type(even){grid-template-columns:300px 1fr}
+.chapter:nth-of-type(even) .pic,.chapter:nth-of-type(even) .pics{order:-1}
+.step{display:inline-block;background:var(--panel);color:var(--water);font-weight:600;font-size:.84rem;padding:3px 12px;border-radius:99px;margin-bottom:12px}
+.chapter h3{font-size:1.45rem;margin-bottom:8px}
+.short{font:600 1.15rem/1.4 Fraunces,Georgia,serif;color:var(--water);margin:0 0 10px}
+.chapter p{margin:0 0 10px;max-width:56ch}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0 0;padding:0;list-style:none}
+.chips li{border:1px solid var(--line);padding:2px 11px;border-radius:99px;font-size:.86rem;color:var(--mute)}
+.links{margin:16px 0 0;display:flex;flex-wrap:wrap;gap:8px 18px;align-items:center;font-size:.95rem}
+.links span{color:var(--mute);font-size:.9rem}
+.links a{font-weight:600}
+.pic{margin:0;background:var(--panel);border-radius:14px;overflow:hidden}
+.pics{display:grid;gap:14px}
+.pic svg,.pic img{display:block;width:100%;height:auto}
+.pic img.fig{aspect-ratio:auto;object-fit:contain;background:#fff}
+.pic img{aspect-ratio:4/3;object-fit:cover;object-position:80% 40%}
+.pic figcaption{padding:10px 14px 12px;font-size:.84rem;line-height:1.4;color:var(--mute)}
 h2{font-size:1.9rem;margin-bottom:22px}
 h3{font-size:1.2rem;margin-bottom:6px}
 .about p{max-width:66ch;margin:0 0 16px}
 .skills{display:flex;flex-wrap:wrap;gap:8px;margin:22px 0 0;padding:0;list-style:none}
 .skills li{background:var(--panel);padding:4px 12px;border-radius:99px;font-size:.92rem}
-.work{border-left:4px solid var(--water);padding:2px 0 2px 20px;margin:0 0 34px;display:grid;grid-template-columns:1fr 220px;gap:24px;align-items:start}
-.pic{position:relative;aspect-ratio:4/3;border-radius:8px;overflow:hidden;background:var(--panel);border:1.5px dashed var(--line)}
-.pic::before{content:"Add image";position:absolute;inset:0;display:grid;place-items:center;color:var(--mute);font-size:.9rem}
-.pic img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
-.work:nth-of-type(2){border-color:color-mix(in srgb,var(--water) 75%,var(--silt))}
-.work:nth-of-type(3){border-color:color-mix(in srgb,var(--water) 50%,var(--silt))}
-.work:nth-of-type(4){border-color:var(--silt)}
-.work p{margin:0;max-width:62ch}
-.work .src{color:var(--mute);font-size:.94rem;margin-top:6px}
 .pubs{list-style:none;margin:0 0 8px;padding:0}
 .pubs li{padding:16px 0;border-bottom:1px solid var(--line);max-width:70ch}
 .pubs li:last-child{border:0}
@@ -71,7 +81,7 @@ ul.plain{margin:0;padding-left:1.1em}
 ul.plain li{margin:0 0 8px}
 .contact a{font-weight:600}
 footer{padding:28px 0 40px;color:var(--mute);font-size:.9rem;border-top:1px solid var(--line)}
-@media (max-width:700px){.work{grid-template-columns:1fr}.pic{order:-1;aspect-ratio:16/9}.hero{padding-top:40px}.id{gap:16px}.portrait{width:84px;height:84px}.two{grid-template-columns:1fr}}
+@media (max-width:700px){.chapter,.chapter:nth-of-type(even){grid-template-columns:1fr;gap:20px;margin-bottom:48px}.chapter .pic,.chapter .pics,.chapter:nth-of-type(even) .pic,.chapter:nth-of-type(even) .pics{order:-1}.hero{padding-top:40px}.id{gap:16px}.portrait{width:84px;height:84px}.two{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -110,39 +120,49 @@ footer{padding:28px 0 40px;color:var(--mute);font-size:.9rem;border-top:1px soli
 
 <section id="research">
 <h2>Research</h2>
-<div class="work">
-<div class="txt">
-<h3>The Lower Rhine River under climate change</h3>
-<p>A schematized hydro-morphological model of the Lower Rhine River and its branches projects how climate-driven changes in the hydrograph and sea-level shift the way flow is distributed at its bifurcations- the Pannerdense Kop and IJsselkop.</p>
-<p class="src">Journal of Geophysical Research: Earth Surface, 2026</p>
+<p class="lede">One question runs through my work: when a river splits in two, where does the water go, and what changes that over time? Here is the story in four steps.</p>
+<article class="chapter">
+<div>
+<span class="step">Step 1 · How a split works</span>
+<h3>Where does the water go when a river splits?</h3>
+<p>Water and sediment spilling sideways from a delta distributary channel are major phenomena influencing the connectivity and morphological development of a delta. In the Wax Lake Delta in Louisiana, I measured various flow attributes from a boat and investigated how water leaving a channel affects the three-dimensional flow structure at the channel-island interface and, in turn, where sediment ultimately ends up.</p>
+<ul class="chips" aria-label="Keywords"><li>Wax Lake Delta</li><li>ADCP measurements</li><li>Flow tracking</li><li>Delta</li><li>Flow structures</li></ul>
+<div class="links"><a href="https://doi.org/10.1029/2021WR031346">Read the paper</a><a href="https://doi.org/10.6084/m9.figshare.15094149">Data</a><span>Water Resources Research, 2022</span></div>
 </div>
-<div class="pic"><img src="images/JGR 2026.jpg" alt="Figure from the Lower Rhine climate projections" width="440" height="330" loading="lazy" onerror="this.remove()"></div>
+<div class="pics">
+<figure class="pic"><a href="images/WRR%202022.jpg" target="_blank" rel="noopener"><img class="fig" src="images/WRR%202022.jpg" loading="lazy" alt="Conceptual figure of the flow structure at the channel-island interface in a river delta" onerror="this.closest('figure').remove()"></a><figcaption>Conceptual figure of the flow structure at the channel-island interface (Chowdhury et al., 2022). Click to enlarge.</figcaption></figure>
+<figure class="pic"><img src="images/field-2019.jpg" width="1600" height="865" loading="lazy" alt="Kifayath on a survey boat on a river, smiling, wearing a yellow life vest"><figcaption>On the water, September 2019.</figcaption></figure>
 </div>
-<div class="work">
-<div class="txt">
-<h3>Signs of tipping in a river system</h3>
-<p>With Astrid Blom and colleagues, I examined long records of a bifurcating river for signals that indicate if the system is approaching a tipping point induced by noise.</p>
-<p class="src">Geophysical Research Letters, 2024</p>
+</article><article class="chapter">
+<div>
+<span class="step">Step 2 · A river held in place</span>
+<h3>What centuries of engineering and peak flows did to the bifurcating Lower Rhine reach?</h3>
+<p>The Rhine splits twice in the Netherlands, and its banks and bed have been engineered for centuries. Using a century of measurements, I showed how floods and human interventions gradually changed the distribution of water over time. Since the 1990s, we have observed a trend change triggered by a sequence of peak flows, resulting in an increasing proportion of the Rhine’s water flowing into one branch.</p>
+<ul class="chips" aria-label="Keywords"><li>Rhine</li><li>River bifurcations</li></ul>
+<div class="links"><a href="https://doi.org/10.1029/2022WR032741">Read the paper</a><a href="https://doi.org/10.4121/19650873">Data</a><span>Water Resources Research, 2023</span></div>
 </div>
-<div class="pic"><img src="images/GRL 2024.jpg" alt="Figure from the river tipping study" width="440" height="330" loading="lazy" onerror="this.remove()"></div>
+<figure class="pic"><a href="images/WRR%202023.jpg" target="_blank" rel="noopener"><img class="fig" src="images/WRR%202023.jpg" loading="lazy" alt="Figure from the study of the Rhine bifurcation region" onerror="this.closest('figure').remove()"></a><figcaption>Figure from Chowdhury et al. (2023). Click to enlarge.</figcaption></figure>
+</article><article class="chapter">
+<div>
+<span class="step">Step 3 · A warning sign?</span>
+<h3>Is the river heading for a tipping point?</h3>
+<p class="short">Big floods can nudge a bifurcating river into a new balance, and the Rhine shows signs that this may have happened.</p>
+<p>With Astrid Blom and colleagues, I examined long river records for early signs that random noise, such as large floods, can push a system past a threshold and change its trajectory toward a new equilibrium configuration.</p>
+<ul class="chips" aria-label="Keywords"><li>Tipping point</li><li>Fluvial</li><li>Bifurcations</li></ul>
+<div class="links"><a href="https://doi.org/10.1029/2024GL111846">Read the paper</a><span>Co-author · Geophysical Research Letters, 2024</span></div>
 </div>
-<div class="work">
-<div class="txt">
-<h3>Bifurcations in an engineered river</h3>
-<p>The Pannerdense Kop and IJsselkop bifurcations split the Lower Rhine River's flow between the Waal and Pannerden Canal, Nederrijn and IJssel. Using 100 years of bed-level, bed surface grain-size, water level, and discharge data, I traced how peak flows and human interventions shaped the system's development over the last century.</p>
-<p class="src">Water Resources Research, 2023</p>
+<figure class="pic"><a href="images/GRL%202024.jpg" target="_blank" rel="noopener"><img class="fig" src="images/GRL%202024.jpg" loading="lazy" alt="Figure from the study of tipping in a bifurcating river system" onerror="this.closest('figure').remove()"></a><figcaption>Figure from Blom et al. (2024). Click to enlarge.</figcaption></figure>
+</article><article class="chapter">
+<div>
+<span class="step">Step 4 · Looking ahead</span>
+<h3>How does climate change impact bifurcating river systems?</h3>
+<p class="short">From around 2050, climate-related changes may gradually become a stronger force on the Rhine, shaping its development and bifurcations.</p>
+<p>I simulated 150 years of the Rhine delta development (hydraulic and morphological) under different climate scenarios. As sea level rises, it starts to matter more for how the water divides at the bifurcations at the end of the century, while changes in river flow mainly erode the riverbed further. This affects flood safety, freshwater supply, and shipping.</p>
+<ul class="chips" aria-label="Keywords"><li>Rhine</li><li>River bifurcations</li><li>Climate change</li><li>Sea level rise</li></ul>
+<div class="links"><a href="https://doi.org/10.1029/2025JF008705">Read the paper</a><a href="https://doi.org/10.4121/eb78267a-137b-4f61-bb7e-6549915a24c7">Data and model</a><span>Journal of Geophysical Research: Earth Surface, 2026</span></div>
 </div>
-<div class="pic"><img src="images/WRR 2023.jpg" alt="Figure of the Rhine bifurcation region" width="440" height="330" loading="lazy" onerror="this.remove()"></div>
-</div>
-<div class="work">
-<div class="txt">
-<h3>Flow in river deltas</h3>
-<p>Field campaigns with an acoustic Doppler current profiler at Wax Lake Delta, USA, showed how lateral outflow from distributary channels influence three-dimensional flow structure at channel-island interfaces and sediment transport.</p>
-<p class="src">Water Resources Research, 2022</p>
-</div>
-<div class="pic"><img src="images/WRR 2022.jpg" alt="Photo or figure from the Wax Lake Delta field work" width="440" height="330" loading="lazy" onerror="this.remove()"></div>
-</div>
-</section>
+<figure class="pic"><a href="images/JGR%202026.jpg" target="_blank" rel="noopener"><img class="fig" src="images/JGR%202026.jpg" loading="lazy" alt="Figure from the climate projections for the Rhine delta" onerror="this.closest('figure').remove()"></a><figcaption>Figure from Chowdhury et al. (2026). Click to enlarge.</figcaption></figure>
+</article></section>
 
 <section id="publications">
 <h2>Publications</h2>
